@@ -1,0 +1,25 @@
+---
+import ButtonSecondary from "./Buttons/ButtonSecondary.astro";
+import CodeIcon from "./Icons/CodeIcon.astro";
+const { src, title, description, demo, code } = Astro.props;
+---
+
+<section class="bg-gray-100 p-3 rounded-md">
+  <header>
+    <a href={demo} target="_blank">
+      <img class="h-auto w-full cursor-pointer" src={src} alt="Linkedin" />
+    </a>
+  </header>
+  <main class="sapce-y-2 py-1">
+    <h2 class="text-lg font-bold">{title}</h2>
+    <p class="text-gray-700">{description}</p>
+  </main>
+  <footer class="flex justify-end items-center">
+    <a href={code} target="_blank" >
+        <ButtonSecondary>
+          <CodeIcon size="24" />
+          Código
+        </ButtonSecondary>
+    </a>
+  </footer>
+</section>
