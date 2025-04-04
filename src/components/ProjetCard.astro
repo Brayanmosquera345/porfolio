@@ -1,25 +1,33 @@
 ---
 import ButtonSecondary from "./Buttons/ButtonSecondary.astro";
+import ButtonPrimary from "./Buttons/ButtonPrimary.astro";
 import CodeIcon from "./Icons/CodeIcon.astro";
+import EyeIcon from "./Icons/EyeIcon.astro";
 const { src, title, description, demo, code } = Astro.props;
 ---
 
-<section class="bg-gray-100 p-3 rounded-md">
+<section class="bg-gray-50 p-2 rounded-md">
   <header>
     <a href={demo} target="_blank">
-      <img class="h-auto w-full cursor-pointer" src={src} alt="Linkedin" />
+      <img class="h-auto w-full cursor-pointer rounded-md" src={src} alt="Linkedin" />
     </a>
   </header>
   <main class="sapce-y-2 py-1">
     <h2 class="text-lg font-bold">{title}</h2>
     <p class="text-gray-700">{description}</p>
   </main>
-  <footer class="flex justify-end items-center">
+  <footer class="flex justify-end items-center px-2 gap-2">
     <a href={code} target="_blank" >
         <ButtonSecondary>
           <CodeIcon size="24" />
           Código
         </ButtonSecondary>
+    </a>
+    <a href={demo} target="_blank" >
+        <ButtonPrimary>
+          <EyeIcon size="24" />
+          Demo
+        </ButtonPrimary>
     </a>
   </footer>
 </section>
