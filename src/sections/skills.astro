@@ -1,0 +1,38 @@
+---
+import Skill from "../components/Skill.astro";
+
+const skills = [
+  "Vue.js",
+  "Nuxt 3",
+  "State Management (Pinia)",
+  "TypeScript",
+  "Tailwind CSS",
+  "Astro",
+  "Node.js",
+  "Express.js",
+  "TanStack Query",
+  "Storybook",
+  "Vitest",
+  "Git",
+  "Bitbucket",
+  "Jira",
+  "Front-end Architecture",
+  "UI/UX Enhancements",
+  "Responsive Design",
+  "Atomic Design",
+  "Figma",
+];
+---
+
+<section id="skills" class="py-6 px-2 flex flex-col items-center">
+  <header class="text-center space-y-2">
+    <h2 class="text-3xl font-bold uppercase">Habilidades</h2>
+    <p class="text-paragraph">En este apartado puedes ver mis habilidades y herramientas con las que he trabajado en mi tiempo de experiencia.</p>
+  </header>
+  <div class="flex gap-2 py-4 flex-wrap max-w-5xl">
+    {skills.map((skill) => (
+      <Skill skill={skill} />
+    ))}
+  </div>
+</section>
+

@@ -1,0 +1,101 @@
+---
+import Image from "astro/components/Image.astro";
+import vue from "../assets/img/vue.svg";
+import tailwind from "../assets/img/tailwind.svg";
+import astro from "../assets/img/astro.svg";
+import figma from "../assets/img/figma.svg";
+import nuxt from "../assets/img/nuxt.svg";
+import git from "../assets/img/git.svg";
+import html from "../assets/img/html.svg";
+import css from "../assets/img/css.svg";
+import javascript from "../assets/img/javascript.svg";
+import typeScript from "../assets/img/typescript.svg";
+import react from "../assets/img/react.svg";
+
+const logos = [
+    {
+        src: vue,
+        alt: 'Logo Vue'
+    },
+    {
+        src: tailwind,
+        alt: 'Logo Tailwind'
+    },
+    {
+        src: react,
+        alt: 'Logo React'
+    },
+    {
+        src: figma,
+        alt: 'Logo Figma'
+    },
+    {
+        src: html,
+        alt: 'Logo HTML'
+    },
+    {
+        src: nuxt,
+        alt: 'Logo Nuxt'
+    },
+    {
+        src: git,
+        alt: 'Logo Git'
+    },
+    {
+        src: css,
+        alt: 'Logo CSS'
+    },
+    {
+        src: astro,
+        alt: 'Logo Astro'
+    },
+    {
+        src: javascript,
+        alt: 'Logo Javascript'
+    },
+    {
+        src: typeScript,
+        alt: 'Logo TypeScript'
+    }
+]
+---
+
+<div class="slider bg-primary overflow-hidden relative mx-auto w-full py-4 border-b-8 border-sky-50">
+  <div class="slide-track">
+    {logos.concat(logos).map((logo, i) => (
+      <div class="slide">
+        <Image src={logo.src} alt={logo.alt}  />
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+
+  .slider .slide-track {
+    display: flex;
+    animation: scroll 20s linear infinite;
+    gap: 100px;
+    align-items: center;
+    /* width: calc(100px * 14); ancho fijo por cantidad de elementos */
+  }
+
+  .slider .slide {
+    width: 50px;
+    flex-shrink: 0;
+  }
+
+  .slider .slide img {
+    width: 100%;
+    display: block;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 11)); /* mueve la mitad para que coincida con el duplicado */
+    }
+  }
+</style>

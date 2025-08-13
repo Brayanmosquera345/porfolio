@@ -1,0 +1,13 @@
+
+.gradient-bg {
+
+  background-color: #F6F6F6;
+  /* Dos gradientes: uno para líneas verticales y otro para horizontales */
+  background-image: 
+    linear-gradient(to right, #CBCBCB 1px, transparent 1px),
+    linear-gradient(to bottom, #CBCBCB 1px, transparent 1px);
+
+  /* Tamaño del patrón: cambia 100px a lo que necesites */
+  background-size: 200px 200px;
+}
+

@@ -1,170 +1,20 @@
 ---
-import Image from "astro/components/Image.astro";
 import Layout from "../layouts/Layout.astro";
-import foto from "../assets/img/fotoLinke.png";
-import ProjetCard from "../components/ProjetCard.astro";
-import Skill from "../components/Skill.astro";
-import Experiencie from "../components/Experiencie.astro";
-import DowloadIcon from "../components/Icons/DowloadIcon.astro";
-import ButtonPrimary from "../components/Buttons/ButtonPrimary.astro";
-import MailIcon from "../components/Icons/MailIcon.astro";
 import Footer from "../components/Footer.astro";
+import NavBar from "../components/NavBar.astro";
+import Hero from "../sections/hero.astro";
+import About from "../sections/about.astro";
+import Projects from "../sections/projects.astro";
+import Skills from "../sections/skills.astro";
+import Experience from "../sections/experiences.astro";
 ---
 
 <Layout title="David Mosquera">
-  <div class="relative">
-    <div class="bg-gradient-to-r from-[#F05E52] to-[#2FA3A8] w-full h-40"></div>
-    <main class="absolute w-full top-14 lg:top-32 px-2 md:px-16 lg:px-64">
-      <section
-        class="w-full flex flex-col lg:flex-row gap-2 text-center lg:text-start justify-between items-center p-3 border-b border-gray-200"
-      >
-        <div class="flex flex-col lg:flex-row items-center gap-x-4">
-          <div
-            class="h-32 w-32 flex items-center justify-center rounded-full overflow-hidden"
-          >
-            <Image
-              src={foto}
-              class="w-full h-auto object-cover"
-              alt="Foto de Brayan David"
-            />
-          </div>
-          <header class="space-y-2">
-            <div class="space-y-1">
-              <h1 class="text-3xl font-bold">Brayan David Mosquera Medina</h1>
-              <span class="text-gray-700">Frontend Developer</span>
-            </div>
-            <div
-              class="flex gap-1 items-center justify-center lg:justify-start text-gray-700"
-            >
-              <MailIcon size="24" />
-              <span>david.mosquera.dev@gmail.com</span>
-            </div>
-          </header>
-        </div>
-        <a href="/Curriculum.pdf" download="David Mosquera">
-          <ButtonPrimary>
-            <DowloadIcon size="24" />
-            Descargar CV
-          </ButtonPrimary>
-        </a>
-      </section>
-      <div class="w-full"></div>
-      <section class="p-3 border-b border-gray-200 space-y-2">
-        <h2 class="text-xl font-bold">Sobre mi</h2>
-        <p class="text-gray-700">
-          Desde siempre he sido una persona curiosa; constantemente me he preguntado: ¿Cómo funciona esto? ¿Cómo funciona aquello? Esa curiosidad me llevó a convertirme en desarrollador frontend con experiencia en Vue.js, Nuxt 3 y Tailwind CSS.
-          <br>
-          Gracias a mi inquietud por aprender, me mantengo al día con nuevas herramientas y tecnologías, y no dudo en asumir nuevos retos, ya sea liderando una presentación, proponiendo soluciones innovadoras o explorando nuevas formas de optimizar el trabajo.
-          <br>
-          Me considero una persona visual, ya que antes de asumir un reto, siempre lo visualizo. No importa si se trata de diseñar una nueva interfaz o definir una arquitectura; me gusta imaginar su funcionalidad antes de plasmarla en código.
-        </p>
-      </section>
-      <section class="pt-5">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
-          <ProjetCard
-            demo="https://membretes.vercel.app/"
-            code="https://github.com/Brayanmosquera345/membretesapp"
-            src="https://res.cloudinary.com/dlmhszrtv/image/upload/v1743581660/mokups_guvmzn.png"
-            title="Membretes"
-            description="Este proyecto de membretes nació con la idea de ofrecer una solución accesible que permita a empresas y particulares integrar su identidad de marca de forma profesional. Para su desarrollo, utilicé Vue.js, Pinia y Tailwind CSS, además de la biblioteca PDF-lib y vue-pdf, que facilita la creación de membretes personalizados con la información del usuario."
-          />
-          <ProjetCard
-            demo="https://testorninja.vercel.app/"
-            code="https://github.com/Brayanmosquera345/testorninja"
-            src="https://res.cloudinary.com/dlmhszrtv/image/upload/v1753504213/mokups-testorninja_nkfmjy.png"
-            title="Testor Ninja"
-            description="Testor Ninja es una aplicación web que genera pruebas dinámicas de opción múltiple usando inteligencia artificial. El usuario ingresa un tema y un nivel, y la IA genera automáticamente un test de 10 preguntas. Al finalizar, el sistema califica las respuestas y genera un feedback personalizado con recomendaciones de estudio."
-          />
-        </div>
-      </section>
-      <section class="pt-5 px-2">
-        <h2 class="text-xl font-bold">Habilidades</h2>
-        <div class="flex gap-2 py-4 flex-wrap">
-          <Skill skill="Vue.js" />
-          <Skill skill="Nuxt 3" />
-          <Skill skill="State Management (Pinia)" />
-          <Skill skill="TypeScript" />
-          <Skill skill="Tailwind CSS" />
-          <Skill skill="Astro" />
-          <Skill skill="Node.js" />
-          <Skill skill="Express.js" />
-          <Skill skill="TanStack Query" />
-          <Skill skill="Storybook" />
-          <Skill skill="Vitest" />
-          <Skill skill="Git" />
-          <Skill skill="Bitbucket" />
-          <Skill skill="Jira" />
-          <Skill skill="Front-end Architecture" />
-          <Skill skill="UI/UX Enhancements" />
-          <Skill skill="Responsive Design" />
-          <Skill skill="Atomic Design" />
-          <Skill skill="Figma" />
-        </div>
-      </section> 
-      <section class="pt-4 px-2">
-        <h2 class="text-xl font-bold">Experiencia</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 py-5">
-          <Experiencie
-            title="Frontend Developer / Metrix LA"
-            date="Agosto 2024 - Actualidad"
-          >
-            Esta experiencia me ha permitido combinar habilidades técnicas y de
-            diseño con una mentalidad estratégica, contribuyendo al crecimiento
-            del equipo y asegurando soluciones ágiles y efectivas.
-            <ul class="list-disc px-4 py-2">
-              <li>
-                Optimicé la UI con Vue.js, Nuxt 3 y Tailwind, mejorando la
-                usabilidad y reduciendo tiempos de carga.
-              </li>
-              <li>
-                Desarrollé componentes reutilizables en Figma con soporte para
-                modo claro/oscuro.
-              </li>
-              <li>
-                Implementé pruebas automatizadas con Vitest para asegurar
-                calidad y estabilidad.
-              </li>
-              <li>
-                Colaboré en la creación de un sistema de diseño estandarizado.
-              </li>
-              <li>
-                Participé en sprints y revisiones de código bajo la metodología
-                Scrum.
-              </li>
-              <li>
-                Brindé apoyo técnico al equipo, fomentando el aprendizaje
-                colaborativo.
-              </li>
-            </ul>
-          </Experiencie>
-          <Experiencie
-            title="Frontend Developer / LIAN BPO"
-            date="Febrero 2024 - Agosto 2024"
-          >
-            Durante mi tiempo en LIAN BPO, tuve la oportunidad de crecer como
-            desarrollador frontend, aplicando mis conocimientos para crear
-            interfaces eficientes y colaborando en la optimización de
-            aplicaciones.
-            <ul class="list-disc px-4 py-2">
-              <li>
-                Diseñé e implementé interfaces con Vue.js y Tailwind CSS,
-                mejorando la experiencia de usuario.
-              </li>
-              <li>
-                Trabajé en equipo bajo la metodología Scrum, participando en
-                sprints y revisiones de código para optimizar aplicaciones.
-              </li>
-              <li>
-                Utilicé Git para el control de versiones, comprendiendo el flujo
-                completo de desarrollo.
-              </li>
-            </ul>
-            Esta experiencia fortaleció mis habilidades en diseño, programación y
-            trabajo en equipo dentro de un entorno profesional.
-          </Experiencie>
-        </div>
-      </section>
-      <Footer />
-    </main>
-  </div>
+  <NavBar />
+  <Hero />
+  <About />
+  <Projects />
+  <Skills />
+  <Experience />
+  <Footer />
 </Layout>

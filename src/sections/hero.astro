@@ -1,0 +1,21 @@
+---
+import Image from "astro/components/Image.astro";
+import foto from "../assets/img/foto-hero-section.png";
+import Slider from "../components/Slider.astro";
+import CardCopyEmail from "../components/CardCopyEmail.astro";
+---
+
+<section id="hero" class="text-center w-full">
+  <article class="space-y-2 w-full flex flex-col items-center px-2">
+    <p class="text-paragraph">👋Hola, yo soy david</p>
+    <h1 class="text-4xl lg:text-5xl font-extrabold uppercase">Desarrollador Frontend</h1>
+    <p class="max-w-5xl text-paragraph">
+      Desarrollador con dos años de experiencia creando aplicaciones modernas y escalables, especializado en Vue 3, React, Nuxt 3 y Tailwind CSS en el frontend, y Express.js y PostgreSQL en el backend, con un enfoque constante en ofrecer la mejor experiencia de usuario.
+    </p>
+  </article>
+  <picture class="w-full flex justify-center relative">
+    <Image src={foto} alt="Foto de David" width="500" height="500" />
+    <CardCopyEmail />
+  </picture>
+  <Slider />
+</section>

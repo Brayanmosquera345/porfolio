@@ -1,0 +1,26 @@
+---
+import ProjetCard from "../components/ProjetCard.astro";
+---
+
+<section id="project" class="py-6 space-y-2 flex flex-col items-center px-4">
+  <header class="flex flex-col items-center text-center space-y-2">
+    <h2 class="text-3xl font-bold uppercase">Proyectos</h2>
+    <p class="text-paragraph">En este apartado puedes ver mis proyectos y trabajos en desarrollo.</p>
+  </header>
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 max-w-5xl">
+    <ProjetCard
+      demo="https://membretes.vercel.app/"
+      code="https://github.com/Brayanmosquera345/membretesapp"
+      src="https://res.cloudinary.com/dlmhszrtv/image/upload/v1743581660/mokups_guvmzn.png"
+      title="Membretes"
+      description="Este proyecto de membretes nació con la idea de ofrecer una solución accesible que permita a empresas y particulares integrar su identidad de marca de forma profesional. Para su desarrollo, utilicé Vue.js, Pinia y Tailwind CSS, además de la biblioteca PDF-lib y vue-pdf, que facilita la creación de membretes personalizados con la información del usuario."
+    />
+    <ProjetCard
+      demo="https://testorninja.vercel.app/"
+      code="https://github.com/Brayanmosquera345/testorninja"
+      src="https://res.cloudinary.com/dlmhszrtv/image/upload/v1753504213/mokups-testorninja_nkfmjy.png"
+      title="Testor Ninja"
+      description="Testor Ninja es una aplicación web que genera pruebas dinámicas de opción múltiple usando inteligencia artificial. El usuario ingresa un tema y un nivel, y la IA genera automáticamente un test de 10 preguntas. Al finalizar, el sistema califica las respuestas y genera un feedback personalizado con recomendaciones de estudio."
+    />
+  </div>
+</section>

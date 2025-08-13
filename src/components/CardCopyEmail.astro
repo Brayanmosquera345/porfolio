@@ -1,0 +1,58 @@
+---
+import CopyIcon from "./Icons/CopyIcon.astro";
+import CheckIcon from "./Icons/CheckIcon.astro";
+---
+
+<section
+  class="border border-gray-100 rounded-xl p-4 space-y-3
+         bg-background backdrop-blur-md shadow-lg
+         max-w-96 mx-auto absolute bottom-4"
+>
+  <header class="text-start">
+    <h3 class="font-bold">¡Envíame un correo!</h3>
+    <p class="text-paragraph">
+      Estoy seguro que le puedo aportar valor en tu proyecto 💪
+    </p>
+  </header>
+
+  <div class="flex items-center gap-2">
+    <input
+      type="text"
+      id="email-input"
+      value="david.mosquera.dev@gmail.com"
+      readonly
+      class="flex-1 bg-transparent border border-gray-300 rounded-lg px-3 py-2 text-paragraph focus:outline-none focus:ring-2 focus:ring-accent"
+    />
+    <button
+      id="btn-cpy"
+      class="p-2 rounded-lg border border-gray-300 hover:bg-gray-200 text-paragraph transition"
+    >
+      <CopyIcon  size="20" />
+    </button>
+    <button
+      id="btn-check"
+      class="hidden p-2 rounded-lg border border-gray-300 hover:bg-gray-200 text-paragraph transition"
+    >
+      <CheckIcon size="20" />
+    </button>
+  </div>
+</section>
+
+<script>
+  const btnCpy = document.getElementById("btn-cpy");
+  const btnCheck = document.getElementById("btn-check");
+
+  function copyEmial() {
+    navigator.clipboard.writeText("david.mosquera.dev@gmail.com");
+    btnCpy.classList.add("hidden");
+    btnCheck.classList.remove("hidden");
+    setTimeout(() => {
+      btnCheck.classList.add("hidden");
+      btnCpy.classList.remove("hidden");
+    }, 2000);
+  }
+
+  btnCpy.addEventListener("click", () => {
+    copyEmial();
+  });
+</script>

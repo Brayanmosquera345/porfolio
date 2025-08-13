@@ -2,12 +2,12 @@
 const { title, date } = Astro.props
 ---
 
-<article class="border border-gray-300 rounded-xl p-3 space-y-2">
+<article class="border bg-white border-gray-300 rounded-xl p-3 space-y-2">
     <head class="space-y-1">
         <h3 class="text-lg font-bold">{title}</h3>
         <span>{date}</span>
     </head>
-  <main class="text-gray-700">
+  <main class="text-paragraph">
     <slot />
   </main>
 </article>
